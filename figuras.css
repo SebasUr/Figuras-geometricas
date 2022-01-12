@@ -114,7 +114,8 @@ form {
 @media (max-width:840px) {
     #math-container {
         grid-template-rows: auto 1fr auto;
-        display: block;
+        display: grid;
+        place-items: center;
     }
     #Cuadrado, #Triangulo, #Circulo {
         width: 95%;
@@ -124,7 +125,5 @@ form {
         box-shadow: 0px 16px 51px -11px rgba(0, 0, 0, 0.602);
         text-align: center;
         align-items: center;
-        margin-bottom: 20px;
-        margin-top: 20px;
     }
 }
