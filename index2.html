@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="figuras2.css">
+</head>
+<body>
+    <div id="principal-container">
+    <div id="container">
+
+    <header id="header">
+        <h1 id="title"> <img src="formas.png" id="icon">Figuras geométricas </h1>
+       <div><button type="button" class="primary-button" onclick="window.location.href='index.html'"> Vuelve a la anterior página </button> </div>
+    </header>
+
+    <div id="math-container">
+    <section id="Cuadrado">
+        <h2>Calcula el área y perímetro de una figura geométrica de X lados</h2>
+        <form>
+            <img src="https://i.pinimg.com/originals/8f/07/5e/8f075e2839b5b64dc740e123e773713e.gif" id="iconsquare">
+            
+            <label for="InputLados">Escribe cuántos lados tiene tu figura</label>
+            <input id="InputLados" type="number" min="0"/ class="input-numbers">
+
+            <label for="InputMedidas"> Escribe las medidas de los lados de tu figura </label>
+            <input id="InputMedidas" type="number" min="0" / class="input-numbers">
+
+            <button type="button" onclick="calcularPerimetroFigura()" class="primary-button"> Calcular el perímetro </button>
+            <button type="button" onclick="calcularAreaFigura()" class="primary-button"> Calcular el área </button>
+            <p id="resultado" class="resultadosP"></p>
+
+        </form>
+    </section>
+    </div>
+</div>
+</div>
+    <script src="./figuras2.js"> </script>
+</body>
+</html>

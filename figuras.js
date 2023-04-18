@@ -1,3 +1,4 @@
+
 // Codigo del cuadrado
 console.group("Cuadrado");
 
@@ -52,16 +53,25 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
 
-    const perimetro = perimetroCuadrado(value);
-    resultado.innerHTML = "el perimetro de tu cuadrado es " + perimetro;
+    if(value <= 0 || value.trim() === ""){
+        resultado.innerHTML = "Ingrese número(s) válido(s)"
+    } else {
+        const perimetro = perimetroCuadrado(value);
+        resultado.innerHTML = "El perímetro de tu cuadrado es " + perimetro;
+    }
+    
 }
 
 function calcularAreaCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
 
-    const area = areaCuadrado(value);
-    resultado.innerHTML = "el area de tu cuadrado es " + area;
+    if(value <= 0 || value.trim() === ""){
+        resultado.innerHTML = "Ingrese número(s) válido(s)"
+    } else {
+        const area = areaCuadrado(value);
+        resultado.innerHTML = "El área de tu cuadrado es " + area;
+    }
 }
 
 // Funciones Circulo
@@ -71,23 +81,31 @@ function calcularDiametroCirculo(){
     const value = input.value;
 
     const diametro = diametroCirculo(value);
-    resultadoCirculo.innerHTML = "el diametro de tu circulo es " + diametro;
+    resultadoCirculo.innerHTML = "El diámetro de tu circulo es " + diametro;
 }
 
 function calcularPerimetroCirculo(){
     const input = document.getElementById("InputCirculo");
     const value = input.value;
 
-    const perimetro = perimetroCirculo(value);
-    resultadoCirculo.innerHTML = "el perimetro de tu circulo es " + perimetro;
+    if(value <= 0 || value.trim() === ""){
+        resultadoCirculo.innerHTML = "Ingrese número(s) válido(s)"
+    } else {
+        const perimetro = perimetroCirculo(value);
+        resultadoCirculo.innerHTML = "El perímetro de tu circulo es " + perimetro;
+    }
 }
 
 function calcularAreaCirculo(){
     const input = document.getElementById("InputCirculo");
     const value = input.value;
 
-    const area = areaCirculo(value);
-    resultadoCirculo.innerHTML = "el area de tu circulo es " + area;
+    if(value <= 0 || value.trim() === ""){
+        resultadoCircula.innerHTML = "Ingrese número(s) válido(s)"
+    } else {
+        const area = areaCirculo(value);
+        resultadoCirculo.innerHTML = "El área de tu circulo es " + area;
+    }
 }
 
 // Funciones triangulo
@@ -96,20 +114,28 @@ function calcularPerimetroTriangulo(){
     const input = document.getElementById("InputTriangulo");
     const input1 = document.getElementById("InputTriangulo1");
     const inputBase = document.getElementById("InputTrianguloBase");
-    const value = parseInt(input.value);
-    const value1 = parseInt(input1.value);
-    const valueBase = parseInt(inputBase.value);
+    const value = input.value;
+    const value1 = input1.value;
+    const valueBase = inputBase.value;
 
-    const perimetro = perimetroTriangulo(value, value1, valueBase);
-    resultadoTriangulo.innerHTML = "El perimetro de tu triangulo es " + perimetro;
+    if(value <= 0 || value.trim() === "" || value1 <= 0 || value1.trim() === "" || valueBase <= 0 || valueBase.trim() === ""){
+        resultadoTriangulo.innerHTML = "Ingrese número(s) válido(s)"
+    } else {
+        const perimetro = perimetroTriangulo(parseInt(value), parseInt(value1), parseInt(valueBase));
+        resultadoTriangulo.innerHTML = "El perímetro de tu triángulo es " + perimetro;
+    }
 }
 
 function calcularAreaTriangulo(){
     const inputBase = document.getElementById("InputTrianguloBase");
     const inputAltura = document.getElementById("InputTrianguloAltura");
-    const valueBase = parseInt(inputBase.value);
-    const valueAltura = parseInt(inputAltura.value);
+    const valueBase = inputBase.value;
+    const valueAltura = inputAltura.value;
 
-    const area = areaTriangulo(valueBase, valueAltura);
-    resultadoTriangulo.innerHTML = "El area de tu triangulo es " + area;
+    if(valueBase <= 0 || valueBase.trim() == "" || valueAltura <= 0 || valueAltura.trim() == "" ){
+        resultadoTriangulo.innerHTML = "Ingrese número(s) válido(s)"
+    } else {
+        const area = areaTriangulo(parseInt(valueBase), parseInt(valueAltura));
+        resultadoTriangulo.innerHTML = "El área de tu triángulo es " + area;
+    }
 }
